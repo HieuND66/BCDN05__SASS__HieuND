@@ -1,0 +1,28 @@
+
+.carousel{
+  // background-image: url(../images/Violet_top_left_wave.png);
+  // background-size: contain;
+  // background-repeat: no-repeat;
+  // background-position: bottom;
+
+    .title{
+      padding: 100px 0 0 0;
+      .titleHead{
+        @include styleText($color-primarily, $fs-3 + 0.2rem, $fw-2 );
+        display: block;
+      }
+      .titlePri{
+        @include styleText($color-black-01, $fs-5, $fw-3 );
+        line-height: 1.1;
+      }
+    }
+    .bg__carousel{
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+    }
+  }
+
+

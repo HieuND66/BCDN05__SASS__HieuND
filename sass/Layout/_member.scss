@@ -1,0 +1,53 @@
+.member{  
+  background-color: #dcd1f3;
+  background-image: url(../images/Wave_White_bottom_right_shape_01.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-top: 2em;
+  position: relative;
+ 
+  .item__member{
+    margin-bottom: 30px;
+    background-color: $color-white-02;
+    // padding: 0 2em;
+    border-radius: 10px;
+    line-height: 1.8em;
+    padding-bottom: 12px;
+    transition: all 0.3s ease;
+    &:hover{
+      box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+    }
+    .img__member{
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      img{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 101%;
+        transition: all 1s ease;
+        transform: scale3d(1,1,1);
+       &:hover{
+         
+         transform: scale3d(1.1,1.1,1.1);
+       }
+      }
+    }
+    .content__member{
+      text-align: center;
+   
+      span{
+       margin-bottom: 0.7em;
+        display: block;
+      }
+      .titleHead{
+        @include styleText($color-primarily, $fs-7, $fw-2)
+      }
+      .name__member{
+        @include styleText($color-black-01, $fs-9, $fw-3)
+      }
+    }
+
+  }
+}

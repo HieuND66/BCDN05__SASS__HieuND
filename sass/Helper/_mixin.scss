@@ -1,0 +1,40 @@
+@mixin styleText($color, $fs, $fw) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+}
+
+@mixin styleButton($bg, $pd-y,$pd-x, $border) {
+    background: $bg;
+    padding: $pd-y $pd-x;
+    border: $border;
+}
+
+@mixin styleHoverBtn($bg, $color, $boder) {
+  background: $bg;
+  color: $color;
+  border: $boder;
+}
+@mixin styleInp($pd, $fs, $bd) {
+  padding: $pd;
+  font-size: $fs;
+  height: $bd;
+}
+@mixin styleIcon($color, $fs, $ml, $mr) {
+  color: $color;
+  font-size: $fs;
+  margin-left: $ml;
+  margin-right: $mr;
+};
+// @mixin resonsive($screen) {
+//   // mas-has-key: Kiểm tra tên key có tồn tại trong map ko
+//   @if (map-has-key($map: $breakpoints, $key: $screen)){
+//     $value: map-get($map: $breakpoints, $key: $screen);
+//     @media screen and(max-width: $value){
+//       @content;
+//     }
+//   }
+//   @else{
+//     @error 'Màn hình không tồn tại'
+//   }
+// }
