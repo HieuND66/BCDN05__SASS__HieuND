@@ -6,9 +6,12 @@
   background-position: bottom;
   padding-top: 2em;
   position: relative;
- 
+  .blog__space {
+    height: 40px;
+    width: 100%;
+}
   .item__member{
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     background-color: $color-white-02;
     // padding: 0 2em;
     border-radius: 10px;

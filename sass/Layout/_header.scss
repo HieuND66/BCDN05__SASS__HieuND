@@ -113,3 +113,129 @@
     }
   }
 }
+
+@media screen and(min-width:0) {
+  .navbar {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+  }
+  .navbar-toggler {
+      border: none;
+  }
+  .navbar-brand img {
+      height: 3rem;
+  }
+  .nav-item a{
+      color: $color-black-01;
+      &:hover{
+         color: $color-primarily;
+      }
+  }
+  .header__contact {
+      padding-top: $pd-2;
+  }
+  .header__social-icon {
+      padding-top: $pd-1;
+  }
+  .navbar-light .navbar-nav .nav-link:focus,
+  .navbar-light .navbar-nav .nav-link:hover {
+      color: $color-primarily;
+  }
+}
+@media screen and(min-width:1024px) {
+  #header {
+      margin: auto;  
+  }
+  .header__contact {
+      display: flex;
+  }
+}
+@media screen and(min-width:1200px) {
+
+  .navbar {
+      flex-direction: row;
+  }
+  .navbar-nav{
+      align-items: center;
+  }
+  .navbar-brand img {
+      height: 80px;
+  }
+  .navbar-expand-xl .navbar-nav .nav-link {
+      color: $color-black-01;
+      text-align: center;
+  }
+  .nav-item {
+      width: 95px;
+  }
+  .nav-link {
+      font-weight: $fw-2;
+      position: relative;
+  }
+  .nav-link::after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 5;
+      background-color: $color-primarily;
+      height: 0.5rem;
+      width: 0.5rem;
+      left: 50%;
+      border-radius: 50%;
+      bottom: -4px;
+      pointer-events: none;
+      transform: scale(0);
+      transition: $ts;
+  }
+  .active .nav-link::after {
+      transform: scale(1);
+  }
+  .nav-item:hover {
+      .nav-link::after {
+          transform: scale(1.5);
+      }
+      .nav-link {
+          color: $color-primarily !important;
+      }
+  }
+
+  .header__contact {
+      padding-top: 0;
+      padding-left: 30px;
+  }
+  .header__social-icon {
+      padding-top: 0;
+  }
+  .header__contact-cell {
+      display: flex;
+      align-items: center;
+  }
+  .header__phone {
+      padding-right: 10px;
+  }
+}
+@media screen and(max-width:1200px) {
+  .header{
+    background-color: $color-white-01;
+    .containers{
+      .navContact{
+        float: left;
+        margin-left: 0;
+        flex-direction: column;
+      }
+      .active{
+        .nav-link{
+          &::after{
+            display: none;
+          }
+        }
+      }
+    }
+ 
+  }
+    .navbar-nav{
+    .navContact{
+      float: left 
+    }
+    }
+}
